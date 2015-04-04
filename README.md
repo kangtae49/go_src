@@ -9,4 +9,5 @@ export PATH=$PATH:$GOROOT/bin
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-# git clone https://github.com/dominikh/go-mode.el.git
+# 
+git clone https://github.com/dominikh/go-mode.el.git
