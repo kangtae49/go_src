@@ -1,14 +1,12 @@
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(prefer-coding-system 'utf-8)
-
-(setenv "PATH" "/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/go/bin")
-(setenv "GOPATH" "/usr/local/go/")
+(setenv "PATH" "/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/home/kangtae49/go/bin")
+(setenv "GOROOT" "/home/kangtae49/go")
+(setenv "GOPATH" "/home/kangtae49/src/go_src")
 
 (setq exec-path (cons "/usr/local/go/bin" exec-path))
 (add-to-list 'load-path "~/Misc/emacs/go-mode.el")
 (require 'go-mode-autoloads)
 (add-hook 'before-save-hook 'gofmt-before-save)
+
 
 (defun my-go-mode-hook ()
   ; Call Gofmt before saving
