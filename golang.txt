@@ -1,0 +1,89 @@
+// 패키지 이름은 디렉토리 경로의 마지막 이름을 사용하는 것이 규칙입니다.
+// 예를 들어 "path/filepath" 를 사용한다면 패키지명은 filepath 입니다.
+// TODO: 마지막 이름이 같은 때는 ?
+// (를 사용 끝에 콤마(,)가 없음.
+import (
+    "fmt"
+    "math"
+)
+
+// 
+import "fmt"
+import "math"
+
+// Print 
+//  %g float형   TODO : %f도 있는가?
+fmt.Println("Happy", math.Pi, "Day")
+fmt.Printf("Now you have %g problems.", math.Nextafter(2, 3))
+
+const f = "%T(%v)\n" 
+fmt.Printf(f, ToBe, ToBe)
+fmt.Printf("p[%d] == %d\n", i, p[i])
+
+// Tour #6 메서드, 변수, 상수명은 대문자로 시작해야 패키지를 import 한곳에서 접근가능하다.
+
+// 함수
+func add(x int, y int) int {
+    return x + y
+}
+
+func add(x, y int) int {
+    return x + y
+}
+
+// 결과 2개반환
+func swap(x, y string) (string, string) {
+    return y, x
+}
+
+func main() {
+    a, b := swap("hello", "world")
+    fmt.Println(a, b)
+}
+
+// x, y를 알아서 반환
+func split(sum int) (x, y int) {
+    x = sum * 4 / 9
+    y = sum - x
+    return
+}
+
+// 변수
+var x, y, z int
+var c, python, java bool
+
+// 변수 초기화
+var x, y, z int = 1, 2, 3
+// 초기화 할때는 타입 생략가능
+var c, python, java = true, false, "no!"
+// := 을 사용하여 var와 타입생략, 함수 내부에서만 사용가능
+func main() {
+    c, python, java := true, false, "no!"
+}
+// 상수 (문자, 문자열, 부울, 숫자)
+const Pi = 3.14
+const (
+    Big   = 1 << 100
+    Small = Big >> 99
+)
+
+// if else
+// if 에서 짧은 명령문을 통해 선언된 변수는 else 블럭 안에서도 사용할 수 있습니다.
+if v := math.Pow(x, n); v < lim {
+    return v
+} else {
+    fmt.Printf("%g >= %g\n", v, lim)
+}
+
+// 기본 자료형
+bool
+string
+int  int8  int16  int32  int64
+uint uint8 uint16 uint32 uint64 uintptr
+byte // uint8의 다른 이름(alias)
+rune // int32의 다른 이름(alias)
+     // 유니코드 코드 포인트 값을 표현합니다. 
+float32 float64
+complex64 complex128
+
+
