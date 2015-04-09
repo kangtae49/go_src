@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+import "cnms"
+//import "reflect"
+type lineFunc func(string, uint64) 
+
+
+func main() {
+	//cnms.Fun1()
+	var ri uint64 = 0
+	for _, f:= range cnms.GetFuncList(){
+		f("line", ri)
+
+	}
+
+	fmt.Println("completed")
+	//fmt.Println(reflect.Type("main.f1"))
+}

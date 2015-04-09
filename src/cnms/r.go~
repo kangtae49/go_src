@@ -1,0 +1,22 @@
+package cnms
+
+import "fmt"
+
+func GetFuncList() [] lineFunc {
+	l := [] lineFunc{
+		cnms.Func1,
+		cnms.Func2,
+	}
+	return l
+}
+
+func Func1(line string, ri uint64){
+	fmt.Println(ri, line)
+}
+
+func Func2(line string, ri uint64){
+	fmt.Println(ri, line)
+}
+
+
+
